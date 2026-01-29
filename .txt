@@ -1,0 +1,15 @@
+## BIND MOUNT
+
+1. package.json:
+
+    "scripts": {
+        "start": "nodemon --legacy-watch index.js"
+    }
+
+2.  Docker run COMMAND:
+
+    docker run -it --init ^
+      -p 3000:2001 ^
+      -v "%cd%:/app/project" ^
+      -v /app/project/node_modules ^
+      my-node-app:v3
